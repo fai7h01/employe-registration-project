@@ -32,6 +32,14 @@ public class EmployeeController {
 
         employeeService.saveEmployee(employee);
 
+        return "redirect:/employee/list";
+    }
+
+    @GetMapping("/list")
+    public String listEmployees(Model model){
+
+        model.addAttribute("employeeList",employeeService.readAllEmployees());
+
         return "/employee/employee-list";
     }
 

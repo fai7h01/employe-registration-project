@@ -25,7 +25,7 @@ public class EmployeeController {
     @PostMapping("/insert")
     public String employee(@ModelAttribute("employee") Employee employee){
 
-        System.out.println(employee);
+
 
         return "redirect:/employee/register";
     }

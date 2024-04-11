@@ -44,6 +44,11 @@
                         <div class="form-group col">
                             <label for="inputPassword4">Birthday</label>
                             <input type="date" class="form-control" id="inputBirthday4" th:field="*{birthday}">
+                            <div class="text-danger" th:if="${#fields.hasErrors('birthday')}">
+                                <ul class="list-unstyled">
+                                    <li th:each="error : ${#fields.errors('birthday')}" th:text="${error}"></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="form-row">

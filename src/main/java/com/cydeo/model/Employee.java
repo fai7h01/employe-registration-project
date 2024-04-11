@@ -31,7 +31,7 @@ public class Employee {
 
     // Thymeleaf accepts yyyy-MM-dd, but LocalDate accepts mm-dd-yyyy  -  yyyy-dd-mm
 
-//    @NotNull
+    @NotNull
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate birthday;
 

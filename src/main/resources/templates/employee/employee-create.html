@@ -26,10 +26,20 @@
                         <div class="form-group col">
                             <label for="inputEmail4">First Name</label>
                             <input type="text" class="form-control" id="inputFirstName4" placeholder="First Name" th:field="*{firstName}">
+                            <div class="text-danger" th:if="${#fields.hasErrors('firstName')}">
+                                <ul class="list-unstyled">
+                                    <li th:each="error : ${#fields.errors('firstName')}" th:text="${error}"></li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="form-group col">
                             <label for="inputPassword4">Last Name</label>
                             <input type="text" class="form-control" id="inputLastName4" placeholder="Last Name" th:field="*{lastName}">
+                            <div class="text-danger" th:if="${#fields.hasErrors('lastName')}">
+                                <ul class="list-unstyled">
+                                    <li th:each="error : ${#fields.errors('lastName')}" th:text="${error}"></li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="form-group col">
                             <label for="inputPassword4">Birthday</label>
